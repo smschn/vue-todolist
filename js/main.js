@@ -23,19 +23,21 @@ var app = new Vue ({
                     text: this.newTodoText,
                     done: false
                 });
-                console.log(this.todos);
             },
             removeTodo(indexParameter) {
-                console.log(`Before: ${this.todos}`);
                 this.todos.splice(indexParameter, 1);
-                console.log(`After: ${this.todos}`);
             },
-            changeTodoStatus(index) {
-                if (this.todos[index].done == false) {
-                    this.todos[index].done = true;
+            changeTodoStatus(indexParameter) {
+                if (this.todos[indexParameter].done == false) {
+                    this.todos[indexParameter].done = true;
                 } else {
-                    this.todos[index].done = false;
+                    this.todos[indexParameter].done = false;
                 }
             }
         }
 })
+
+// bug:
+//all'eliminazione di un 'todo' dalla lista
+// la chiave booleana 'done' del todo cancellato
+// viene trasmessa all'elemento successivo

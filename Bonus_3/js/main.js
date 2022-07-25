@@ -18,13 +18,17 @@ var app = new Vue ({
             newTodoText: ''
         },
         methods: {
+            // Bonus_3: aggiunte parti relative a questo bonus
             addNewTodo() {
-                
-                this.todos.push({
-                    text: this.newTodoText,
-                    done: false
-                });
-                this.newTodoText = '';
+                if (this.newTodoText == '') {
+                    alert('Errore! Devi inserire una parola!')
+                } else {
+                    this.todos.push({
+                        text: this.newTodoText,
+                        done: false
+                    });
+                    this.newTodoText = '';
+                }
             },
             removeTodo(indexParameter) {
                 this.todos.splice(indexParameter, 1);

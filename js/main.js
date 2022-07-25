@@ -29,6 +29,13 @@ var app = new Vue ({
                 console.log(`Before: ${this.todos}`);
                 this.todos.splice(indexParameter, 1);
                 console.log(`After: ${this.todos}`);
+            },
+            changeTodoStatus(index) {
+                if (this.todos[index].done == false) {
+                    this.todos[index].done = true;
+                } else {
+                    this.todos[index].done = false;
+                }
             }
         }
 })

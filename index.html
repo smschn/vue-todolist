@@ -18,7 +18,7 @@
         <button id="add_todo" v-on:click="addNewTodo">Clicca per aggiungere</button>
 
         <ul>
-            <li v-for="(todo, index) in todos" v-bind:class=" (todo.done == true)?'line_through':'' ">{{ todos[index].text }} <span @click="removeTodo(index)">X</span></li>
+            <li v-for="(todo, index) in todos" v-bind:class=" (todo.done == true)?'line_through':'' " @click="changeTodoStatus(index)">{{ todos[index].text }} <span @click="removeTodo(index)">X</span></li>
         </ul>
 
     </div>

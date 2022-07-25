@@ -8,7 +8,7 @@ var app = new Vue ({
                 },
                 {
                     text: 'secondo elemento della lista',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'terzo elemento della lista',
@@ -17,7 +17,7 @@ var app = new Vue ({
             ],
             newTodo: {
                 text: '',
-                done: true
+                done: false
             },
         },
         methods: {

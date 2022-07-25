@@ -18,11 +18,12 @@ var app = new Vue ({
             newTodoText: ''
         },
         methods: {
-            // Bonus_3: aggiunte parti relative a questo bonus
+            // Bonus_3: aggiunte parti relative al bonus_3
             addNewTodo() {
-                if (this.newTodoText == '') {
+                if (this.newTodoText == '') { // se l'utente non ha digitato nulla, allora lo avviso di inserire una parola
                     alert('Errore! Devi inserire una parola!')
                 } else {
+                    this.newTodoText.trim(); // Bonus_3: cancello spazi prima e dopo la parola inserita dall'utente
                     this.todos.push({
                         text: this.newTodoText,
                         done: false

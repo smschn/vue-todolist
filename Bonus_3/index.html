@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bonus_3: Vue: To Do List</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <label for="todo_input">Inserisci nuovo To Do</label>
+        <!-- Bonus_1: aggiunto al campo input evento alla pressione del tasto 'enter'-->
+        <input type="text" id="todo_input" v-model="newTodoText" v-on:keyup.enter="addNewTodo" />
+
+        <label for="add_todo">Aggiungi nuovo To Do alla lista</label>
+        <button id="add_todo" v-on:click="addNewTodo">Clicca per aggiungere</button>
+
+        <ul>
+            <li v-for="(todo, index) in todos" v-bind:class=" (todo.done == true)?'line_through':'' " @click="changeTodoStatus(index)">{{ todos[index].text }} <span @click="removeTodo(index)">X</span></li>
+        </ul>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

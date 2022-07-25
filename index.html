@@ -11,8 +11,11 @@
 
     <div id="app">
 
-        <label for="todo_list">Aggiungi alla lista</label>
-        <input type="text" id="todo_list" />
+        <label for="todo_input">Inserisci nuovo To Do</label>
+        <input type="text" id="todo_input" />
+
+        <label for="add_todo">Aggiungi nuovo To Do alla lista</label>
+        <button id="add_todo">Clicca per aggiungere</button>
 
         <ul>
             <li v-for="(todo, index) in toDos">{{toDos[index].text}}</li>

@@ -17,13 +17,18 @@ var app = new Vue ({
             ],
             newTodo: {
                 text: '',
-                done: false
+                done: true
             },
         },
         methods: {
             addNewTodo() {
                 this.todos.push(this.newTodo);
                 console.log(this.todos);
+            },
+            removeTodo(indexParameter) {
+                console.log(`Before: ${this.todos}`);
+                this.todos.splice(indexParameter, 1);
+                console.log(`After: ${this.todos}`);
             }
         }
-    })
+})

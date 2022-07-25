@@ -3,3 +3,11 @@
     padding: 10px;
     box-sizing: border-box;
 }
+
+.line-through {
+    text-decoration: line-through;
+}
+
+span {
+    display: inline-block;
+}

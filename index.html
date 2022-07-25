@@ -12,13 +12,13 @@
     <div id="app">
 
         <label for="todo_input">Inserisci nuovo To Do</label>
-        <input type="text" id="todo_input" />
+        <input type="text" id="todo_input" v-model="newTodo.text" />
 
         <label for="add_todo">Aggiungi nuovo To Do alla lista</label>
-        <button id="add_todo">Clicca per aggiungere</button>
+        <button id="add_todo" v-on:click="addNewTodo">Clicca per aggiungere</button>
 
         <ul>
-            <li v-for="(todo, index) in toDos">{{toDos[index].text}}</li>
+            <li v-for="(todo, index) in todos">{{ todos[index].text }}</li>
         </ul>
 
     </div>

@@ -12,6 +12,7 @@
     <div id="app">
 
         <label for="todo_input">Inserisci nuovo To Do</label>
+        <!-- Bonus_1: aggiunto al campo input evento alla pressione del tasto 'enter'-->
         <input type="text" id="todo_input" v-model="newTodoText" v-on:keyup.enter="addNewTodo" />
 
         <label for="add_todo">Aggiungi nuovo To Do alla lista</label>

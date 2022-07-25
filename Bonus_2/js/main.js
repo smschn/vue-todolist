@@ -28,6 +28,7 @@ var app = new Vue ({
             removeTodo(indexParameter) {
                 this.todos.splice(indexParameter, 1);
             },
+            // Bonus_2: cambiare il valore di 'done' del 'todo' corrispondente
             changeTodoStatus(indexParameter) {
                 if (this.todos[indexParameter].done == false) {
                     this.todos[indexParameter].done = true;

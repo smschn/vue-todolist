@@ -7,11 +7,11 @@ var app = new Vue ({
                     done: false
                 },
                 {
-                    text: 'secondo elemento della lista',
+                    text: 'Secondo elemento della lista',
                     done: true
                 },
                 {
-                    text: 'terzo elemento della lista',
+                    text: 'Terzo elemento della lista',
                     done: false
                 }
             ],
@@ -36,8 +36,3 @@ var app = new Vue ({
             }
         }
 })
-
-// bug:
-//all'eliminazione di un 'todo' dalla lista
-// la chiave booleana 'done' del todo cancellato
-// viene trasmessa all'elemento successivo

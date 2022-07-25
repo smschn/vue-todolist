@@ -23,6 +23,7 @@ var app = new Vue ({
                     text: this.newTodoText,
                     done: false
                 });
+                this.newTodoText = '';
             },
             removeTodo(indexParameter) {
                 this.todos.splice(indexParameter, 1);

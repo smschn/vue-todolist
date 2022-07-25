@@ -15,14 +15,14 @@ var app = new Vue ({
                     done: false
                 }
             ],
-            newTodo: {
-                text: '',
-                done: false
-            },
+            newTodoText: ''
         },
         methods: {
             addNewTodo() {
-                this.todos.push(this.newTodo);
+                this.todos.push({
+                    text: this.newTodoText,
+                    done: false
+                });
                 console.log(this.todos);
             },
             removeTodo(indexParameter) {
